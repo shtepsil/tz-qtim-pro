@@ -9,9 +9,9 @@ use components\JwtHelper;
 use models\User;
 use app\Request;
 use models\Token;
-use controllers\Controller;
+use controllers\MainController;
 
-class UserController extends Controller
+class UserController extends MainController
 {
     /**
      * @throws \app\exceptions\DbException

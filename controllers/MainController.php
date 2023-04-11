@@ -2,11 +2,11 @@
 
 namespace controllers;
 
-use app\View;
 use components\Debugger as d;
-use models\User;
+use app\Controller;
+use app\View;
 
-class Controller
+class MainController implements Controller
 {
 
     public $title;
@@ -18,5 +18,9 @@ class Controller
         $this->error_text = 'Запрошенная страница не найдена';
         View::render('site/errors', ['context' => $this]);
     }
+
+    public function beforeAction()
+    {}
+
 
 } //Class

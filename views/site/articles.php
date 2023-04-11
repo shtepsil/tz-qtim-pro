@@ -9,30 +9,33 @@ use app\View;
 ?>
 <section class="main w-articles">
     <div class="container">
-        <div class="row">
             <? if (!Request::get('id')): ?>
                 <? if (isset($articles) and is_array($articles) and count($articles) > 0): ?>
-                    <div class="col-md-12">
-                        <div class="articles-list">
-                            <? foreach ($articles as $article): ?>
-                                <? $hover = ''; // $hover = 'hover'; ?>
-                                <?= View::getContent('site/shortcodes/article', [
-                                    'article' => $article
-                                ]) ?>
-                            <? endforeach; ?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="articles-list">
+                                <? foreach ($articles as $article): ?>
+                                    <? $hover = ''; // $hover = 'hover'; ?>
+                                    <?= View::getContent('site/shortcodes/article', [
+                                        'article' => $article
+                                    ]) ?>
+                                <? endforeach; ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <button type="button" class="articles-get-more" data-type="site">
-                            <img src="/template/images/animate/loading.gif" class="loading" />
-                            <span>
-                                <? if (isset($articles) and count($articles) > 0): ?>
-                                    Показать ещё
-                                <? else: ?>
-                                    По пробовать загрузить стати...
-                                <? endif; ?>
-                            </span>
-                        </button>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="articles-get-more" data-type="site">
+                                <img src="/template/images/animate/loading.gif" class="loading" />
+                                <span>
+                                    <? if (isset($articles) and count($articles) > 0): ?>
+                                        Показать ещё
+                                    <? else: ?>
+                                        По пробовать загрузить стати...
+                                    <? endif; ?>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                     <? d::res() ?>
                 <? else: ?>
@@ -43,24 +46,26 @@ use app\View;
                     </div>
                 <? endif ?>
             <? else: ?>
-                <div class="col-md-12">
-                    <div class="back-page bp-top">
-                        <a href="/articles">
-                            < < < К списку новостей</a>
-                    </div>
-                    <div class="article-title-item">
-                        <?= $article['title'] ?>
-                    </div>
-                    <hr>
-                    <div class="article-text-item">
-                        <?= $article['text'] ?>
-                    </div>
-                    <div class="back-page bp-bottom">
-                        <a href="/articles">
-                            < < < К списку новостей</a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="back-page bp-top">
+                            <a href="/articles">
+                                < < < К списку новостей</a>
+                        </div>
+                        <div class="article-title-item">
+                            <?= $article['title'] ?>
+                        </div>
+                        <hr>
+                        <div class="article-text-item">
+                            <?= $article['text'] ?>
+                        </div>
+                        <div class="back-page bp-bottom">
+                            <a href="/articles">
+                                < < < К списку новостей</a>
+                        </div>
                     </div>
                 </div>
             <? endif ?>
-        </div>
+
     </div>
 </section>

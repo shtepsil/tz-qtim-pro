@@ -4,11 +4,11 @@ namespace controllers;
 
 use components\Debugger as d;
 use app\Request;
-use controllers\Controller;
+use controllers\MainController;
 use app\View;
 use models\Articles;
 
-class AdminController extends Controller
+class AdminController extends MainController
 {
 
     /**

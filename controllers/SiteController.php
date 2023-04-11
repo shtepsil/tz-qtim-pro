@@ -14,9 +14,9 @@ use models\Articles;
 use models\User;
 use models\Interpretation;
 use app\Request;
-use controllers\Controller;
+use controllers\MainController;
 
-class SiteController extends Controller
+class SiteController extends MainController
 {
 
     public function actionIndex()

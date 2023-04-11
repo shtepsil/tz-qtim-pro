@@ -8,7 +8,7 @@ use components\Debugger as d;
 use models\Articles;
 use app\Request;
 
-class ArticlesController extends Controller
+class ArticlesController extends MainController
 {
 
     /**

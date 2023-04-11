@@ -63,13 +63,25 @@ User::$info = User::getUserById($_SESSION['user_id']);
                                     <li><a href="#" class="no-link"><i class="fa fa-user"></i> ID:
                                             <?= User::$info['id'] ?>,
                                             <?= User::$info['email'] ?>
-                                        </a></li>
-                                    <li>
-                                        <a href="#" class="no-link logout" data-url="/user/logout" data-type="post">
-                                            <i class="fa fa-lock"></i> Выход
                                         </a>
                                     </li>
-                                <?php endif; ?>
+                                    <li>
+                                        <a href="#" class="no-link logout" data-url="/user/logout" data-type="post">
+                                            <i class="fa fa-unlock"></i> Выход
+                                        </a>
+                                    </li>
+                                <?else:?>
+                                    <li>
+                                        <a href="/user/register">
+                                            <i class="fa fa-pencil"></i> Регистрация
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/login">
+                                            <i class="fa fa-lock"></i> Войти
+                                        </a>
+                                    </li>
+                                <?endif;?>
                             </ul>
                         </div>
                     </div>
@@ -77,35 +89,35 @@ User::$info = User::getUserById($_SESSION['user_id']);
             </div>
         </div><!--/header-middle-->
 
-        <?php if (!User::isGuest()): ?>
-            <!--header-bottom-->
-            <div class="header-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="mainmenu pull-left">
-                                <ul class="nav navbar-nav collapse navbar-collapse">
-                                    <li><a href="/">Главная</a></li>
-                                    <li><a href="/articles">Новости</a></li>
+        <!--header-bottom-->
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a href="/">Главная</a></li>
+                                <li><a href="/articles">Новости</a></li>
+                                <?if(!User::isGuest()):?>
                                     <li><a href="/gadaniya">Погадать</a></li>
                                     <? if (isset(User::$info['role']) and User::$info['role'] == 1): ?>
                                         <li><a href="/admin">Админка</a></li>
                                     <? endif ?>
-                                </ul>
-                            </div>
+                                <?endif?>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div><!--/header-bottom-->
-        <? endif ?>
+            </div>
+        </div><!--/header-bottom-->
 
     </header><!--/header-->
