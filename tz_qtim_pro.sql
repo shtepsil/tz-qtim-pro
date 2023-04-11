@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 27 2021 г., 16:44
--- Версия сервера: 5.7.16-log
--- Версия PHP: 7.0.14
+-- Время создания: Апр 11 2023 г., 16:31
+-- Версия сервера: 8.0.30
+-- Версия PHP: 8.0.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,8 +18,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `gadaniya`
+-- База данных: `tz_qtim_pro`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `articles`
+--
+
+CREATE TABLE `articles` (
+  `id` int NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `created_at` int DEFAULT NULL,
+  `updated_at` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `articles`
+--
+
+INSERT INTO `articles` (`id`, `title`, `text`, `created_at`, `updated_at`) VALUES
+(22, 'Заголовок 1', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p>', 1681217935, NULL),
+(23, 'Заголовок 2', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p>', 1681217940, NULL),
+(24, 'Заголовок 3', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p>', 1681217942, NULL),
+(25, 'Заголовок 4', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem nisi consequatur cumque eaque modi dolorem voluptates labore porro quas alias unde provident repudiandae tempora eligendi, iusto fugit, quibusdam sed?</p>', 1681217945, NULL);
 
 -- --------------------------------------------------------
 
@@ -27,12 +52,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `history` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL COMMENT 'ID пользователя',
+  `id` int NOT NULL,
+  `user_id` int NOT NULL COMMENT 'ID пользователя',
   `code` varchar(10) NOT NULL COMMENT 'Код вопроса',
   `question` text NOT NULL,
-  `created_at` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='История сохранённых вопросов пользователя';
+  `created_at` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='История сохранённых вопросов пользователя';
 
 -- --------------------------------------------------------
 
@@ -41,10 +66,10 @@ CREATE TABLE `history` (
 --
 
 CREATE TABLE `interpretation` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `code` varchar(10) NOT NULL,
   `text` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Интерпретация для гексограмм';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Интерпретация для гексограмм';
 
 --
 -- Дамп данных таблицы `interpretation`
@@ -119,20 +144,41 @@ INSERT INTO `interpretation` (`id`, `code`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `token`
+--
+
+CREATE TABLE `token` (
+  `id` int NOT NULL,
+  `user_id` int DEFAULT NULL,
+  `refresh_token` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `users`
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `created_at` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Таблица пользователей';
+  `id` int NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `is_activated` int NOT NULL DEFAULT '0',
+  `activation_link` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `role` int DEFAULT '0',
+  `created_at` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Таблица пользователей';
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `articles`
+--
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `history`
@@ -147,6 +193,12 @@ ALTER TABLE `interpretation`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `token`
+--
+ALTER TABLE `token`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -157,20 +209,36 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT для таблицы `articles`
+--
+ALTER TABLE `articles`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
 -- AUTO_INCREMENT для таблицы `history`
 --
 ALTER TABLE `history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
 --
 -- AUTO_INCREMENT для таблицы `interpretation`
 --
 ALTER TABLE `interpretation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+
+--
+-- AUTO_INCREMENT для таблицы `token`
+--
+ALTER TABLE `token`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
