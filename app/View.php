@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Сергей
- * Date: 25.10.2021
- * Time: 11:44
- */
+
 namespace app;
 
 class View
@@ -12,7 +7,8 @@ class View
 
     /**
      * @param $view_path
-     * @param array $params
+     * @param $params
+     * @return void
      */
     public static function render($view_path, $params = [])
     {

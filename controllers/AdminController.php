@@ -21,6 +21,9 @@ class AdminController extends Controller
         View::render('admin/index', $data);
     }
 
+    /**
+     * @return void
+     */
     public function actionEdit()
     {
         $data = [];

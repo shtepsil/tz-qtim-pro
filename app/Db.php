@@ -8,6 +8,10 @@ use app\exceptions\DbException;
 class Db
 {
 
+    /**
+     * @return \mysqli
+     * @throws DbException
+     */
     public static function getConnection()
     {
         $params = Main::$a->params['db'];

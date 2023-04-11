@@ -1,16 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Сергей
- * Date: 27.10.2021
- * Time: 11:29
- */
 
 namespace components;
 
 class StringHelper
 {
 
+    /**
+     * @param $url
+     * @param $haracter
+     * @param $code
+     * @return false|mixed|string
+     */
     public static function getPartStrByCharacter($url, $haracter, $code = false)
     {
 

@@ -6,8 +6,7 @@ class DbException extends Exception
 {
 
     /**
-     * DbException constructor.
-     * @param string $message
+     * @param $message
      */
     public function __construct($message = 'Ошибка Db')
     {

@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Сергей
- * Date: 25.10.2021
- * Time: 10:20
- */
+
 namespace app;
 
 use components\Debugger as d;
@@ -23,6 +18,10 @@ class Router
         $this->routes = Main::$a->params['routes'];
     }
 
+    /**
+     * @return void
+     * @throws RouterException
+     */
     public function init()
     {
         $uri = Request::getUri();

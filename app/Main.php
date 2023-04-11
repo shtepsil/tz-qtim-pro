@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Сергей
- * Date: 25.10.2021
- * Time: 10:12
- */
+
 namespace app;
 
 use components\Debugger as d;
@@ -16,6 +11,9 @@ class Main
     public $router;
     public $params;
 
+    /**
+     * @param $params
+     */
     public function __construct($params = [])
     {
         // Настройка приложения
@@ -24,6 +22,11 @@ class Main
         $this->router = new Router();
 
     }
+
+    /**
+     * @return void
+     * @throws exceptions\RouterException
+     */
     public function run()
     {
         // Инициализация приложения

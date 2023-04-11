@@ -5,8 +5,8 @@ namespace app\exceptions;
 class JwtException extends Exception
 {
     /**
-     * RouterException constructor.
      * @param string $message
+     * @param string $title
      */
     public function __construct($message = 'Ошибка токена', $title = 'TokenException')
     {

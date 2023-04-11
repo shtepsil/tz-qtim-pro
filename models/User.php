@@ -96,38 +96,6 @@ class User
     }
 
     /**
-     * @return array|bool
-     * @throws AuthException
-     */
-    public static function checkLogged()
-    {
-        //        $jwt = new JwtHelper();
-//        if(!empty($_COOKIE['token'])){
-//            try{
-//                $jwt->validate($_COOKIE['token']);
-//                $jwt->verify($_COOKIE['token']);
-//                if($user = User::getUserById($jwt->getClaim($_COOKIE['token'],'user_id'))){
-//                    $_SESSION['user_id'] = $user['id'];
-//                    return $user;
-//                }else{
-//                    unset($_SESSION['user_id']);
-//                }
-//            }catch(\Exception $e){
-//                throw new AuthException($e->getMessage());
-//            }
-//        }
-//        unset($_SESSION['user_id']);
-//        return false;
-    }
-
-    public static function userAuth($user_id)
-    {
-        $_SESSION['user_id'] = $user_id;
-        return true;
-
-    }
-
-    /**
      * @throws DbException
      * @throws AuthException
      */

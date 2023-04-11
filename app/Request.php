@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Сергей
- * Date: 25.10.2021
- * Time: 10:53
- */
+
 namespace app;
 
 use components\Debugger as d;
@@ -83,6 +78,10 @@ class Request
         exit();
     }
 
+    /**
+     * @param $key
+     * @return array|mixed|null
+     */
     public static function post($key = NULL)
     {
         $_post = self::serializeToArray($_POST);
@@ -94,6 +93,10 @@ class Request
         return $data;
     }
 
+    /**
+     * @param $key
+     * @return array|mixed|null
+     */
     public static function get($key = NULL)
     {
         $_post = self::serializeToArray($_GET);

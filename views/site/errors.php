@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Сергей
- * Date: 25.10.2021
- * Time: 11:25
- */
+
 ?>
 <div class="wrap-errors" style="text-align: center;min-height: 600px;">
 
